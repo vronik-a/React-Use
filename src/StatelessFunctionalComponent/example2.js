@@ -25,3 +25,27 @@ export const MyComponentClass3 = props => {
   let title = props.title;
   return <h1>{title}</h1>;
 };
+
+// More complex example: the commented sections are where the changes are made
+// in the stateless functional component
+export class GuineaPigs extends React.Component {
+  render() {
+    // let src = this.props.src;
+    return (
+      <div>
+        <h1>Cute Guinea Pigs</h1>
+        {/* <img src={src} /> */}
+      </div>
+    );
+  }
+}
+// unlike a class a function does not have .this
+
+export const GuineaPigs1 = props => {
+  return (
+    <div>
+      <h1>Cute Guinea Pigs</h1>
+      <img src={props.src} alt="im" />
+    </div>
+  );
+};
